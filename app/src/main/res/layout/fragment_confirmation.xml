@@ -1,0 +1,106 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                tools:text="Hello"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-black"
+                android:textColor="#666666"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Your super-awesome portfolio has been successfuly submitted! The preview below is what the community will see!"
+                android:textSize="14sp"
+                android:textColor="#777777"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                app:cardBackgroundColor="#aaaaaa"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="8dp">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                         />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+          <com.google.android.material.textview.MaterialTextView
+              android:id="@+id/lblWebsite"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:text="abc.com"
+              android:layout_gravity="center"
+              android:layout_marginTop="24dp"
+              android:textSize="15sp"
+              android:textColor="#463BE8"
+              android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Arash Jahani"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="#666666"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="arashjahani@gmail.com"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="#666666"
+                android:textStyle="bold"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:background="@drawable/bg_signup_btn"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

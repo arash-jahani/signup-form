@@ -1,0 +1,40 @@
+
+buildscript {
+    ext.kotlin_version = "1.8.10"
+
+    repositories {
+        google()
+        mavenCentral()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.45")
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        mavenCentral()
+        maven {
+            url "https://s3.amazonaws.com/repo.commonsware.com"
+        }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
